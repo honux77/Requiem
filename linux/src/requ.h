@@ -49,4 +49,19 @@ extern char *strcpy();
 #define to_upper(ch) (((ch) >= 'a' && (ch) <= 'z')?\
 					   (ch) - 'a' + 'A' : (ch))
 #define put_back(ch) (put_back_char = (ch))
+#define to_lower(ch) (((ch) >= 'A' && (ch) <= 'Z') ?\
+					   (ch) - 'A' + 'a' : (ch))
+#define BELL			putchar(7)
+#define MAX(x, y)		(((x) >= (y)) ? (x) : (y))
+#define MIN(x, y)		(((x) <= (y)) ? (X) : (y))
+#define is_sign(x)		((x == '-' || x == '+') ? 1: 0)
+#define MALLOC(x)		((x *)malloc(sizeof(x)))
+#define CALLOC(n,x)		((x *)calloc((unsigned) n, sizeof(x)))
+
+
+/********************************************************
+ *         simplilfy inline code macro                  *
+ ********************************************************/
+
+#define ATTRIBUTE_KEY saptr->sa_attr->at_key
 
